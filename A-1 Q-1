@@ -1,0 +1,17 @@
+// Assignment 1- Q1-Armstrong number
+#include <stdio.h>
+#include<math.h>
+
+int main() {
+   int n,num=0,sum=0,d,result;
+   printf("Enter a number:\n");
+   scanf("%d",&n);
+   num=n;
+   while(num!=0){
+       d=num%10;
+       sum=sum+pow(d,3);
+       num=num/10;
+   }
+(sum==n)? printf("Armstrong number") : printf("Not an Armstrong number");
+    return 0;
+}
