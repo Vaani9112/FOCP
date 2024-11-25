@@ -1,0 +1,31 @@
+//Assignment 1 Q2-HCF
+#include <stdio.h>
+int hcf(int a,int b) {
+    int i;
+    if(a>b){
+        for(i=a;i>=1;i--){
+          if(a%i==0 && b%i==0) {
+          return i;
+          break;
+          }
+        }
+    }
+        else {
+            for(i=b;i>=1;i--){
+          if(a%i==0 && b%i==0) {
+          return i;
+          break;
+          }
+        }
+    }
+        
+    }
+
+int main() {
+    int a,b;
+    printf("Enter two numbers:\n");
+    scanf("%d %d",&a,&b);
+int f=hcf(a,b);
+printf("Hcf: %d",f);
+    return 0;
+}
