@@ -1,0 +1,40 @@
+//Assignment-1 Q4-Swap numbers by 4 diffrent methods
+#include <stdio.h>
+
+int main() {
+    int a,b,n,temp=0;
+    printf("Enter 2 numbers:\n");
+    scanf("%d %d",&a,&b);
+    printf("Enter 1 to swap using third variable \nEnter 2 to swap using addition and subtraction \nEnter 3 to swap using bitwise operator \nEnter 4 to swap using multiplication and division \n");
+    scanf("%d",&n);
+    switch(n) {
+        case 1:
+    temp = a;
+    a = b;
+    b = temp;
+    printf("After swapping:%d \n %d\n", a, b);
+    break;
+    case 2:
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("After swapping:%d \n %d\n", a, b);
+    break;
+    case 3: 
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+    printf("After swapping:%d \n %d\n", a, b);
+    break;
+    case 4: 
+    a = a * b;
+    b = a / b;
+    a = a / b;
+    printf("After swapping:%d \n %d\n", a, b); 
+    break;
+    default :
+    printf("Invalid choice!!");
+    break;
+}
+    return 0;
+    }
